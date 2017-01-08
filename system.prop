@@ -3,35 +3,35 @@
 #
 ro.vendor.extension_library=libqti-perfd-client.so
 
-#persist.sys.usb.config=adb
+persist.sys.usb.config=adb
 qcom.bluetooth.soc=smd
 
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-#persist.rild.nitz_plmn=
-#persist.rild.nitz_long_ons_0=
-#persist.rild.nitz_long_ons_1=
-#persist.rild.nitz_long_ons_2=
-#persist.rild.nitz_long_ons_3=
-#persist.rild.nitz_short_ons_0=
-#persist.rild.nitz_short_ons_1=
-#persist.rild.nitz_short_ons_2=
-#persist.rild.nitz_short_ons_3=
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
-ro.ril.enable.amr.wideband=1
+ro.ril.enable.amr.wideband=0
 DEVICE_PROVISIONED=1
 persist.radio.rat_on=combine
 persist.radio.multisim.config=dsds
-ro.telephony.default_network=10
+ro.telephony.default_network=4
 ro.telephony.default_cdma_sub=0
-ro.ril.force_eri_from_xml=true
+ro.ril.force_eri_from_xml=false
 persist.radio.apm_sim_not_pwdn=1
 ro.telephony.ril.config=simactivation
 persist.data.qmi.adb_logmask=0
 persist.radio.msgtunnel.start=false
 
 persist.radio.oem_socket=false
-persist.radio.no_wait_for_card=1
+persist.radio.no_wait_for_card=0
 persist.radio.add_power_save=1
 
 debug.sf.hw=1
@@ -39,7 +39,7 @@ debug.egl.hw=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.4k2kSplit=1
-debug.mdpcomp.logs=0
+debug.mdpcomp.logs=1
 ro.sf.lcd_density=480
 persist.sys.strictmode.disable=true
 dev.pm.dyn_samplingrate=1
@@ -66,7 +66,7 @@ media.stagefright.enable-scan=true
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 
-mmp.enable.3g2=true
+mmp.enable.3g2=false
 mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
 #37491 is decimal sum of supported codecs in AAL
@@ -75,7 +75,7 @@ mm.enable.qcom_parser=37491
 
 # VIDC: debug_levels
 # 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
-vidc.debug.level=1
+vidc.debug.level=2
 #
 # system props for the data modules
 #
@@ -104,7 +104,7 @@ ro.qualcomm.cabl=0
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
+telephony.lteOnCdmaDevice=0
 
 #
 # System props for bluetooth
@@ -141,7 +141,7 @@ ro.qc.sdk.camera.facialproc=false
 audio.offload.buffer.size.kb=32
 
 #Enable offload audio video playback by default
-av.offload.enable=true
+av.offload.enable=false
 
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=false
@@ -172,9 +172,9 @@ sys.nubia_safe_preset=1
 persist.factory.keypad_type=standard_without_camera
 persist.factory.receiver_volume=10
 persist.factory.loopback_volume=12
-#persist.gps.qc_nlp_in_use=1
-#persist.loc.nlp_name=com.qualcomm.location
-#ro.gps.agps_provider=1
+persist.gps.qc_nlp_in_use=1
+persist.loc.nlp_name=com.qualcomm.location
+ro.gps.agps_provider=1
 ro.pip.gated=0
 vold.pfe=deactivated
 
@@ -195,4 +195,4 @@ persist.sys.wfd.1080p_support=true
 #add model number
 persist.sys.modelnumber=NX507J
 
-dalvik.vm.dex2oat-swap=false
+dalvik.vm.dex2oat-swap=true
